@@ -21,7 +21,7 @@ use examples::fibonacci::fibonacci;
 
 my @numbers = (0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144);
 
-for my $i (0 .. scalar(@numbers)) {
+for my $i (0 .. (scalar(@numbers) - 1)) {
   my $result = fibonacci::fibonacci($i);
   my $expected = $numbers[$i];
   is($expected, $result, "fibonacci($i) == $expected");
